@@ -1,0 +1,51 @@
+# =========================
+# FRONTEND (Node.js / React / Vite)
+# =========================
+# Dependências
+frontend/node_modules/
+
+# Pastas de build
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+
+# Logs e arquivos de debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente locais
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# BACKEND (.NET / C#)
+# =========================
+# Pastas de compilação
+**/[Bb]in/
+**/[Oo]bj/
+
+# Arquivos de usuário e cache do Visual Studio / Rider
+.vs/
+*.user
+*.suo
+*.ide
+*.rider/
+
+# Banco de Dados SQLite (Não subir o banco preenchido)
+*.db
+*.db-shm
+*.db-wal
+
+# Configurações de desenvolvimento local
+appsettings.Development.json
+
+# =========================
+# SISTEMA OPERACIONAL / IDE
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/

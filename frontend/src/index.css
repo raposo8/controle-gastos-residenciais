@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --font-display: "DM Serif Display", Georgia, serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: #0f1117;
+        color: #e8e9ed;
+        min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #1a1d27;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #3a3f55;
+        border-radius: 3px;
+    }
+}
