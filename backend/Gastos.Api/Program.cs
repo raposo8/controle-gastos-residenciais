@@ -3,9 +3,16 @@ using Gastos.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configura o banco de dados SQLite
+// Define o caminho do banco. Se estiver na Azure (tem a variável HOME), salva na pasta liberada.
+var dbPath = "gastos.db";
+var azureHome = Environment.GetEnvironmentVariable("HOME");
+if (!string.IsNullOrEmpty(azureHome))
+{
+    dbPath = Path.Combine(azureHome, "gastos.db");
+}
+
 builder.Services.AddDbContext<GastosDbContext>(options =>
-    options.UseSqlite("Data Source=gastos.db"));
+    options.UseSqlite($"Data Source={dbPath}"));
 
 builder.Services.AddScoped<Gastos.Application.Services.TransacaoService>();
 
